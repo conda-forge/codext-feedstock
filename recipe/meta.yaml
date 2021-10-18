@@ -16,6 +16,7 @@ build:
   entry_points:
     - codext = codext:main
     - debase = codext.base.__init__:main
+    - base16 = codext.base.baseN:main16
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -36,6 +37,7 @@ test:
     - pip check
     - codext --help
     - debase --help
+    - base16 --help
   requires:
     - pip
 
