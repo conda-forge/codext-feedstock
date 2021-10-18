@@ -1,5 +1,5 @@
 {% set name = "codext" %}
-{% set version = "1.8.5" %}
+{% set version = "1.9.0" %}
 
 
 package:
@@ -8,13 +8,28 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/codext-{{ version }}.tar.gz
-  sha256: 968dbadd08eef092c8a987e6c37252fde1fca18cd52f78b7f01cee7900c63a94
+  sha256: bc1e8cef12a18f81b872c7868f06f8b46bb92fa66f86576963f383857f0ae121
 
 build:
   noarch: python
   number: 0
   entry_points:
     - codext = codext:main
+    - debase = codext.base.__init__:main
+    - base16 = codext.base.baseN:main16
+    - base36 = codext.base.baseN:main36
+    - base45 = codext.base.base45:main
+    - base58-bitcoin = codext.base.baseN:main58bc
+    - base58-ripple = codext.base.baseN:main58rp
+    - base58-flickr = codext.base.baseN:main58fl
+    - base62 = codext.base.baseN:main62
+    - base63 = codext.base.baseN:main63
+    - base67 = codext.base.baseN:main67
+    - base85 = codext.base.base85:main
+    - base91 = codext.base.base91:main
+    - base100 = codext.base.base100:main
+    - base122 = codext.base.base122:main
+    
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -34,13 +49,27 @@ test:
   commands:
     - pip check
     - codext --help
+    - debase --help
+    - base16 --help
+    - base36 --help
+    - base45 --help
+    - base58-bitcoin --help
+    - base58-ripple --help
+    - base58-flickr --help
+    - base62 --help
+    - base63 --help
+    - base67 --help
+    - base85 --help
+    - base91 --help
+    - base100 --help
+    - base122 --help
   requires:
     - pip
 
 about:
   home: https://github.com/dhondta/python-codext
   summary: Native codecs extension
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_file: LICENSE
 
 extra:
