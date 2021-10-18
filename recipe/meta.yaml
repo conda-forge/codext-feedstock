@@ -19,6 +19,8 @@ build:
     - base16 = codext.base.baseN:main16
     - base36 = codext.base.baseN:main36
     - base45 = codext.base.base45:main
+    - base58-bitcoin = codext.base.baseN:main58bc
+    
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -42,6 +44,7 @@ test:
     - base16 --help
     - base36 --help
     - base45 --help
+    - base58-bitcoin --help
   requires:
     - pip
 
