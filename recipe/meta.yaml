@@ -18,6 +18,7 @@ build:
     - debase = codext.base.__init__:main
     - base16 = codext.base.baseN:main16
     - base36 = codext.base.baseN:main36
+    - base45 = codext.base.base45:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -40,6 +41,7 @@ test:
     - debase --help
     - base16 --help
     - base36 --help
+    - base45 --help
   requires:
     - pip
 
