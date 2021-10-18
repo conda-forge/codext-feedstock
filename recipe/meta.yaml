@@ -23,6 +23,7 @@ build:
     - base58-ripple = codext.base.baseN:main58rp
     - base58-flickr = codext.base.baseN:main58fl
     - base62 = codext.base.baseN:main62
+    - base63 = codext.base.baseN:main63
     
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -51,6 +52,7 @@ test:
     - base58-ripple --help
     - base58-flickr --help
     - base62 --help
+    - base63 --help
   requires:
     - pip
 
