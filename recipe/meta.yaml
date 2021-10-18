@@ -26,6 +26,7 @@ build:
     - base63 = codext.base.baseN:main63
     - base67 = codext.base.baseN:main67
     - base85 = codext.base.base85:main
+    - base91 = codext.base.base91:main
     
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -57,6 +58,7 @@ test:
     - base63 --help
     - base67 --help
     - base85 --help
+    - base91 --help
   requires:
     - pip
 
