@@ -20,6 +20,7 @@ build:
     - base36 = codext.base.baseN:main36
     - base45 = codext.base.base45:main
     - base58-bitcoin = codext.base.baseN:main58bc
+    - base58-ripple = codext.base.baseN:main58rp
     
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -45,6 +46,7 @@ test:
     - base36 --help
     - base45 --help
     - base58-bitcoin --help
+    - base58-ripple --help
   requires:
     - pip
 
