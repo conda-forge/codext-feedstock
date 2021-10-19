@@ -23,6 +23,7 @@ build:
     - base16 = codext.base.baseN:main16
     - base32 = codext.base.baseN:main32
     - base32-hex = codext.base.baseN:main32hex
+    - base32-geohash = codext.base.baseN:main32geo
     - base36 = codext.base.baseN:main36
     - base45 = codext.base.base45:main
     - base58-bitcoin = codext.base.baseN:main58bc
@@ -63,6 +64,7 @@ test:
     - base16 --help
     - base32 --help
     - base32-hex --help
+    - base32-geohash --help
     - base36 --help
     - base45 --help
     - base58-bitcoin --help
