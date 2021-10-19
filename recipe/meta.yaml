@@ -19,6 +19,7 @@ build:
     - base2 = codext.base.baseN:main2
     - base3 = codext.base.baseN:main3
     - base4 = codext.base.baseN:main4
+    - base8 = codext.base.baseN:main8
     - base16 = codext.base.baseN:main16
     - base36 = codext.base.baseN:main36
     - base45 = codext.base.base45:main
@@ -56,6 +57,7 @@ test:
     - base2 --help
     - base3 --help
     - base4 --help
+    - base8 --help
     - base16 --help
     - base36 --help
     - base45 --help
