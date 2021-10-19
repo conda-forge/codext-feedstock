@@ -33,6 +33,7 @@ build:
     - base62 = codext.base.baseN:main62
     - base63 = codext.base.baseN:main63
     - base64 = codext.base.baseN:main64
+    - base64-url = codext.base.baseN:main64url
     - base67 = codext.base.baseN:main67
     - base85 = codext.base.base85:main
     - base91 = codext.base.base91:main
@@ -76,6 +77,7 @@ test:
     - base62 --help
     - base63 --help
     - base64 --help
+    - base64-url --help
     - base67 --help
     - base85 --help
     - base91 --help
