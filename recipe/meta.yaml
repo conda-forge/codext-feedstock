@@ -16,6 +16,7 @@ build:
   entry_points:
     - codext = codext:main
     - debase = codext.base.__init__:main
+    - base2 = codext.base.baseN:main2
     - base16 = codext.base.baseN:main16
     - base36 = codext.base.baseN:main36
     - base45 = codext.base.base45:main
