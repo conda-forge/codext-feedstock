@@ -32,6 +32,7 @@ build:
     - base58-flickr = codext.base.baseN:main58fl
     - base62 = codext.base.baseN:main62
     - base63 = codext.base.baseN:main63
+    - base64 = codext.base.baseN:main64
     - base67 = codext.base.baseN:main67
     - base85 = codext.base.base85:main
     - base91 = codext.base.base91:main
@@ -74,6 +75,7 @@ test:
     - base58-flickr --help
     - base62 --help
     - base63 --help
+    - base64 --help
     - base67 --help
     - base85 --help
     - base91 --help
