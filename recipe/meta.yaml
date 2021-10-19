@@ -1,5 +1,5 @@
 {% set name = "codext" %}
-{% set version = "1.9.0" %}
+{% set version = "1.9.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/codext-{{ version }}.tar.gz
-  sha256: bc1e8cef12a18f81b872c7868f06f8b46bb92fa66f86576963f383857f0ae121
+  sha256: c4ff78909504dc47fbc96266e2ea663cd7ee9f253bcfb5274dcf6784527a4479
 
 build:
   noarch: python
@@ -29,7 +29,7 @@ build:
     - base91 = codext.base.base91:main
     - base100 = codext.base.base100:main
     - base122 = codext.base.base122:main
-    
+
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
