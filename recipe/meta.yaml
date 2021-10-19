@@ -17,6 +17,7 @@ build:
     - codext = codext:main
     - debase = codext.base.__init__:main
     - base2 = codext.base.baseN:main2
+    - base3 = codext.base.baseN:main3
     - base16 = codext.base.baseN:main16
     - base36 = codext.base.baseN:main36
     - base45 = codext.base.base45:main
@@ -51,6 +52,8 @@ test:
     - pip check
     - codext --help
     - debase --help
+    - base2 --help
+    - base3 --help
     - base16 --help
     - base36 --help
     - base45 --help
