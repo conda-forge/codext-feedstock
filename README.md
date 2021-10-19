@@ -3,7 +3,7 @@ About codext
 
 Home: https://github.com/dhondta/python-codext
 
-Package license: GPL-3.0
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/codext-feedstock/blob/master/LICENSE.txt)
 

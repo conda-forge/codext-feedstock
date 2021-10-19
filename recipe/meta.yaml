@@ -1,5 +1,5 @@
 {% set name = "codext" %}
-{% set version = "1.9.0" %}
+{% set version = "1.9.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/codext-{{ version }}.tar.gz
-  sha256: bc1e8cef12a18f81b872c7868f06f8b46bb92fa66f86576963f383857f0ae121
+  sha256: c4ff78909504dc47fbc96266e2ea663cd7ee9f253bcfb5274dcf6784527a4479
 
 build:
   noarch: python
@@ -16,7 +16,15 @@ build:
   entry_points:
     - codext = codext:main
     - debase = codext.base.__init__:main
+    - base2 = codext.base.baseN:main2
+    - base3 = codext.base.baseN:main3
+    - base4 = codext.base.baseN:main4
+    - base8 = codext.base.baseN:main8
     - base16 = codext.base.baseN:main16
+    - base32 = codext.base.baseN:main32
+    - base32-hex = codext.base.baseN:main32hex
+    - base32-geohash = codext.base.baseN:main32geo
+    - base32-z = codext.base.baseN:mainz32
     - base36 = codext.base.baseN:main36
     - base45 = codext.base.base45:main
     - base58-bitcoin = codext.base.baseN:main58bc
@@ -24,12 +32,14 @@ build:
     - base58-flickr = codext.base.baseN:main58fl
     - base62 = codext.base.baseN:main62
     - base63 = codext.base.baseN:main63
+    - base64 = codext.base.baseN:main64
+    - base64-url = codext.base.baseN:main64url
     - base67 = codext.base.baseN:main67
     - base85 = codext.base.base85:main
     - base91 = codext.base.base91:main
     - base100 = codext.base.base100:main
     - base122 = codext.base.base122:main
-    
+
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -38,7 +48,7 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - markdown2 >=2.4.0
+    - markdown2 >=2.3.10
     - python >=3.6
     - six
 
@@ -50,7 +60,15 @@ test:
     - pip check
     - codext --help
     - debase --help
+    - base2 --help
+    - base3 --help
+    - base4 --help
+    - base8 --help
     - base16 --help
+    - base32 --help
+    - base32-hex --help
+    - base32-geohash --help
+    - base32-z --help
     - base36 --help
     - base45 --help
     - base58-bitcoin --help
@@ -58,6 +76,8 @@ test:
     - base58-flickr --help
     - base62 --help
     - base63 --help
+    - base64 --help
+    - base64-url --help
     - base67 --help
     - base85 --help
     - base91 --help
