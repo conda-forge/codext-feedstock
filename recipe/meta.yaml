@@ -21,6 +21,7 @@ build:
     - base4 = codext.base.baseN:main4
     - base8 = codext.base.baseN:main8
     - base16 = codext.base.baseN:main16
+    - base26 = codext.base.baseN:main26
     - base32 = codext.base.baseN:main32
     - base32-hex = codext.base.baseN:main32hex
     - base32-geohash = codext.base.baseN:main32geo
@@ -65,6 +66,7 @@ test:
     - base4 --help
     - base8 --help
     - base16 --help
+    - base26 --help
     - base32 --help
     - base32-hex --help
     - base32-geohash --help
