@@ -1,5 +1,5 @@
 {% set name = "codext" %}
-{% set version = "1.9.1" %}
+{% set version = "1.9.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/codext-{{ version }}.tar.gz
-  sha256: c4ff78909504dc47fbc96266e2ea663cd7ee9f253bcfb5274dcf6784527a4479
+  sha256: 80255cae7cb24b440d262141b45d067ac4baed26d89a5f88db8256d7ec1c4b17
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ build:
     - base4 = codext.base.baseN:main4
     - base8 = codext.base.baseN:main8
     - base16 = codext.base.baseN:main16
+    - base26 = codext.base.baseN:main26
     - base32 = codext.base.baseN:main32
     - base32-hex = codext.base.baseN:main32hex
     - base32-geohash = codext.base.baseN:main32geo
@@ -65,6 +66,7 @@ test:
     - base4 --help
     - base8 --help
     - base16 --help
+    - base26 --help
     - base32 --help
     - base32-hex --help
     - base32-geohash --help
