@@ -1,5 +1,5 @@
 {% set name = "codext" %}
-{% set version = "1.11.2" %}
+{% set version = "1.11.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/codext-{{ version }}.tar.gz
-  sha256: 4724b9ec3a593a7d7df641a1bdb14a8f0be654102933ddf3c9493c389888c9ec
+  sha256: c9094e7f0a3d3f7483b0f55a7856d6c49d5510a7a3b3a8e13c0a5522ed3499fa
 
 build:
   noarch: python
