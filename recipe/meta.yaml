@@ -54,9 +54,19 @@ requirements:
     - six
 
 test:
+  source_files:
+    - tests
   imports:
     - codext
     - codext.base
+    - codext.binary
+    - codext.common
+    - codext.compressions
+    - codext.crypto
+    - codext.hashing
+    - codext.languages
+    - codext.others
+    - codext.stegano
   commands:
     - pip check
     - codext --help
@@ -85,11 +95,14 @@ test:
     - base91 --help
     - base100 --help
     - base122 --help
+    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/dhondta/python-codext
+  doc_url: https://python-codext.readthedocs.io/en/latest/
   summary: Native codecs extension
   license: GPL-3.0-or-later
   license_file: LICENSE
