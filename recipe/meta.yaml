@@ -95,7 +95,7 @@ test:
     - base91 --help
     - base100 --help
     - base122 --help
-    - pytest -vvv --capture=tee-sys tests
+    - pytest -vvv --capture=tee-sys -k "not hash_functions" tests
   requires:
     - openssl
     - pip
