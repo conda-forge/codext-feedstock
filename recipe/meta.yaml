@@ -97,6 +97,7 @@ test:
     - base122 --help
     - pytest -vvv --capture=tee-sys tests
   requires:
+    - openssl
     - pip
     - pytest
 
