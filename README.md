@@ -9,6 +9,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/codext-feedstoc
 
 Summary: Native codecs extension
 
+Documentation: https://python-codext.readthedocs.io/en/latest/
+
 Current build status
 ====================
 
