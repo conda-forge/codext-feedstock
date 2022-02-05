@@ -102,7 +102,7 @@ test:
     - base64 --help
     - base64-url --help
     - base67 --help
-    - base85 --help
+#     - base85 --help
     - base85-adobe --help
     - base85-xbtoa --help
     - base85-ipv6 --help
