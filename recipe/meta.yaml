@@ -111,7 +111,7 @@ test:
     - base91 --help
     - base100 --help
     - base122 --help
-    - pytest -vvv --capture=tee-sys -k "not hash_functions" tests
+    - pytest -vvv --capture=tee-sys -k "not hash_functions and not codec_base64" tests
   requires:
     - openssl
     - pip
