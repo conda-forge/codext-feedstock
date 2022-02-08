@@ -1,5 +1,5 @@
 {% set name = "codext" %}
-{% set version = "1.11.6" %}
+{% set version = "1.12.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/codext-{{ version }}.tar.gz
-  sha256: 589994c5a0183eba271ea5e2e9e4d2dc3f97ad3e07baa3bb2e04fdf0ad8de324
+  sha256: 6d98ed7bfccd85c338ac666d3e9e3bab65a3ad545828c1698cba84b09b2d30c0
 
 build:
   noarch: python
@@ -16,15 +16,18 @@ build:
   entry_points:
     - codext = codext:main
     - debase = codext.base.__init__:main
+    - base1 = codext.base.baseN:main1
     - base2 = codext.base.baseN:main2
     - base3 = codext.base.baseN:main3
     - base4 = codext.base.baseN:main4
     - base8 = codext.base.baseN:main8
+    - base10 = codext.base.baseN:main10
     - base16 = codext.base.baseN:main16
     - base26 = codext.base.baseN:main26
     - base32 = codext.base.baseN:main32
     - base32-hex = codext.base.baseN:main32hex
     - base32-geohash = codext.base.baseN:main32geo
+    - base32-crockford = codext.base.baseN:main32crk
     - base32-z = codext.base.baseN:mainz32
     - base36 = codext.base.baseN:main36
     - base45 = codext.base.base45:main
@@ -36,10 +39,15 @@ build:
     - base64 = codext.base.baseN:main64
     - base64-url = codext.base.baseN:main64url
     - base67 = codext.base.baseN:main67
-    - base85 = codext.base.base85:main
-    - base91 = codext.base.base91:main
-    - base100 = codext.base.base100:main
-    - base122 = codext.base.base122:main
+    - base85 = codext.base.base85:main85
+    - base85-adobe = codext.base.base85:main85adobe
+    - base85-xbtoa = codext.base.base85:main85xbtoa
+    - base85-ipv6 = codext.base.base85:main85rfc1924
+    - base85-xml = codext.base.base85:main85xml
+    - base85-zeromq = codext.base.base85:main85zeromq
+    - base91 = codext.base.base91:main91
+    - base100 = codext.base.base100:main100
+    - base122 = codext.base.base122:main122
 
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -71,15 +79,18 @@ test:
     - pip check
     - codext --help
     - debase --help
+    - base1 --help
     - base2 --help
     - base3 --help
     - base4 --help
     - base8 --help
+    - base10 --help
     - base16 --help
     - base26 --help
     - base32 --help
     - base32-hex --help
     - base32-geohash --help
+    - base32-crockford --help
     - base32-z --help
     - base36 --help
     - base45 --help
@@ -92,10 +103,15 @@ test:
     - base64-url --help
     - base67 --help
     - base85 --help
+    - base85-adobe --help
+    - base85-xbtoa --help
+    - base85-ipv6 --help
+    - base85-xml --help
+    - base85-zeromq --help
     - base91 --help
     - base100 --help
     - base122 --help
-    - pytest -vvv --capture=tee-sys -k "not hash_functions" tests
+    - pytest -vvv --capture=tee-sys -k "not hash_functions and not codec_base64" tests
   requires:
     - openssl
     - pip
