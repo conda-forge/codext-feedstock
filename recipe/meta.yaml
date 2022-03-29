@@ -15,7 +15,7 @@ build:
   number: 0
   entry_points:
     - codext = codext:main
-    - debase = codext.base.__init__:main
+    - unbase = codext.base.__init__:main
     - base1 = codext.base.baseN:main1
     - base2 = codext.base.baseN:main2
     - base3 = codext.base.baseN:main3
@@ -57,7 +57,7 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - markdown2 >=2.4.0
+    - markdown2 ==2.3.10
     - python >=3.6
     - six
 
@@ -78,7 +78,7 @@ test:
   commands:
     - pip check
     - codext --help
-    - debase --help
+    - unbase --help
     - base1 --help
     - base2 --help
     - base3 --help
