@@ -55,11 +55,11 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - setuptools
+    - setuptools >=61.0
+    - setuptools-scm
   run:
     - markdown2 >=2.4.0
     - python >=3.6
-    - six
 
 test:
   source_files:
