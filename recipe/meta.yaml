@@ -1,5 +1,5 @@
 {% set name = "codext" %}
-{% set version = "1.15.1" %}
+{% set version = "1.15.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/codext-{{ version }}.tar.gz
-  sha256: 38fd99a7d7acb63e3f39fa3e97f956d3c296f3a9378d0045b88ab672b21d157a
+  sha256: 51971849a2ac08068b2702d9b70ac395355a795c0200a23bd2bcea0971546e98
 
 build:
   noarch: python
@@ -54,12 +54,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8,<4.0
     - setuptools >=61.0
     - setuptools-scm
   run:
     - markdown2 >=2.4.0
-    - python >=3.6
+    - python >=3.8,<4.0
 
 test:
   source_files:
