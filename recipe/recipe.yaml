@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: codext
-  version: "1.15.8"
+  version: "1.15.9"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/codext-${{ version }}.tar.gz
-  sha256: 00c71e4899b49ed0214fb9ba4e706eb1d3bb6dc3b77335ee25df50106e6f1eec
+  sha256: d68daf6e1a8e865d42c131adfb5eaca7d6c3232fb43f5e304caf02207178e257
 
 build:
   number: 0
@@ -60,9 +60,10 @@ requirements:
     - setuptools >=61.0
     - setuptools-scm
   run:
-    - markdown2 >=2.4.0
     - python >=${{ python_min }}
-
+    - markdown2 >=2.5.4
+    - legacycrypt
+    
 tests:
   - python:
       imports:
