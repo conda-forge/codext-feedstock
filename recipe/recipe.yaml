@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: codext
-  version: "1.16.5"
+  version: "2.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/codext-${{ version }}.tar.gz
-  sha256: b0d7d9e0ca36c045b649b58b4dc6034efebb47fde023019c32a2c596a2d2cbca
+  sha256: dbd322b49094bdabbe5e88a90a13bb6733be73e7ec2dc0bcd4e6df4fe12a5d32
 
 build:
   number: 0
