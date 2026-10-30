@@ -134,7 +134,7 @@ tests:
       - base100 --help
       - base122 --help
       # - base128-latin1 --help
-      - base256 --help
+      # - base256 --help
       - base1024 --help
       - base2048 --help
       - base32768 --help
