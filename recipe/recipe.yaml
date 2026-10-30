@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: codext
-  version: "1.16.5"
+  version: "2.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/codext-${{ version }}.tar.gz
-  sha256: b0d7d9e0ca36c045b649b58b4dc6034efebb47fde023019c32a2c596a2d2cbca
+  sha256: dbd322b49094bdabbe5e88a90a13bb6733be73e7ec2dc0bcd4e6df4fe12a5d32
 
 build:
   number: 0
@@ -18,8 +18,6 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
-      - codext = codext:main
-      - unbase = codext.base.__init__:main
       - base1 = codext.base.baseN:main1
       - base2 = codext.base.baseN:main2
       - base3 = codext.base.baseN:main3
@@ -34,6 +32,7 @@ build:
       - base32-crockford = codext.base.baseN:main32crk
       - base32-z = codext.base.baseN:mainz32
       - base36 = codext.base.baseN:main36
+      - base38 = codext.base.base38:main38
       - base45 = codext.base.base45:main
       - base58-bitcoin = codext.base.baseN:main58bc
       - base58-ripple = codext.base.baseN:main58rp
@@ -43,6 +42,7 @@ build:
       - base64 = codext.base.baseN:main64
       - base64-url = codext.base.baseN:main64url
       - base67 = codext.base.baseN:main67
+      - base69 = codext.base.base69:main69
       - base85 = codext.base.base85:main85
       - base85-adobe = codext.base.base85:main85adobe
       - base85-xbtoa = codext.base.base85:main85xbtoa
@@ -52,6 +52,15 @@ build:
       - base91 = codext.base.base91:main91
       - base100 = codext.base.base100:main100
       - base122 = codext.base.base122:main122
+      - base128-latin1 = codext.base.base128:main128latin1
+      - base256 = codext.base.base256:main256
+      - base1024 = codext.base.base1024:main1024
+      - base2048 = codext.base.base65536:main2048
+      - base32768 = codext.base.base65536:main32768
+      - base65536 = codext.base.base65536:main65536
+      - base131072 = codext.base.base131072:main131072
+      - codext = codext.__main__:main
+      - unbase = codext.base.__init__:main
 
 requirements:
   host:
@@ -71,7 +80,7 @@ tests:
         - codext.base
         - codext.binary
         - codext.common
-        - codext.compressions
+        # - codext.compressions
         - codext.crypto
         - codext.hashing
         - codext.languages
@@ -90,8 +99,6 @@ tests:
         - pytest
         - python ${{ python_min }}.*
     script:
-      - codext --help
-      - unbase --help
       - base1 --help
       - base2 --help
       - base3 --help
@@ -106,6 +113,7 @@ tests:
       - base32-crockford --help
       - base32-z --help
       - base36 --help
+      - base38 --help
       - base45 --help
       - base58-bitcoin --help
       - base58-ripple --help
@@ -115,6 +123,7 @@ tests:
       - base64 --help
       - base64-url --help
       - base67 --help
+      # - base69 --help
       - base85 --help
       - base85-adobe --help
       - base85-xbtoa --help
@@ -124,6 +133,15 @@ tests:
       - base91 --help
       - base100 --help
       - base122 --help
+      # - base128-latin1 --help
+      # - base256 --help
+      - base1024 --help
+      - base2048 --help
+      - base32768 --help
+      - base65536 --help
+      # - base131072 --help
+      - codext --help
+      - unbase --help
       - "pytest -vvv --capture=tee-sys -k \"not hash_functions and not codec_base64 and not rank_input and not guess_decode\" tests"
 
 about:
