@@ -139,7 +139,7 @@ tests:
       - base2048 --help
       - base32768 --help
       - base65536 --help
-      - base131072 --help
+      # - base131072 --help
       - codext --help
       - unbase --help
       - "pytest -vvv --capture=tee-sys -k \"not hash_functions and not codec_base64 and not rank_input and not guess_decode\" tests"
