@@ -99,49 +99,49 @@ tests:
         - pytest
         - python ${{ python_min }}.*
     script:
-      - base1 -- help
-      - base2 -- help
-      - base3 -- help
-      - base4 -- help
-      - base8 -- help
-      - base10 -- help
-      - base16 -- help
-      - base26 -- help
-      - base32 -- help
-      - base32-hex -- help
-      - base32-geohash -- help
-      - base32-crockford -- help
-      - base32-z -- help
-      - base36 -- help
-      - base38 -- help
-      - base45 -- help
-      - base58-bitcoin -- help
-      - base58-ripple -- help
-      - base58-flickr -- help
-      - base62 -- help
-      - base63 -- help
-      - base64 -- help
-      - base64-url -- help
-      - base67 -- help
-      - base69 -- help
-      - base85 -- help
-      - base85-adobe -- help
-      - base85-xbtoa -- help
-      - base85-ipv6 -- help
-      - base85-xml -- help
-      - base85-zeromq -- help
-      - base91 -- help
-      - base100 -- help
-      - base122 -- help
-      - base128-latin1 -- help
-      - base256 -- help
-      - base1024 -- help
-      - base2048 -- help
-      - base32768 -- help
-      - base65536 -- help
-      - base131072 -- help
-      - codext -- help
-      - unbase -- help
+      - base1 --help
+      - base2 --help
+      - base3 --help
+      - base4 --help
+      - base8 --help
+      - base10 --help
+      - base16 --help
+      - base26 --help
+      - base32 --help
+      - base32-hex --help
+      - base32-geohash --help
+      - base32-crockford --help
+      - base32-z --help
+      - base36 --help
+      - base38 --help
+      - base45 --help
+      - base58-bitcoin --help
+      - base58-ripple --help
+      - base58-flickr --help
+      - base62 --help
+      - base63 --help
+      - base64 --help
+      - base64-url --help
+      - base67 --help
+      - base69 --help
+      - base85 --help
+      - base85-adobe --help
+      - base85-xbtoa --help
+      - base85-ipv6 --help
+      - base85-xml --help
+      - base85-zeromq --help
+      - base91 --help
+      - base100 --help
+      - base122 --help
+      - base128-latin1 --help
+      - base256 --help
+      - base1024 --help
+      - base2048 --help
+      - base32768 --help
+      - base65536 --help
+      - base131072 --help
+      - codext --help
+      - unbase --help
       - "pytest -vvv --capture=tee-sys -k \"not hash_functions and not codec_base64 and not rank_input and not guess_decode\" tests"
 
 about:
