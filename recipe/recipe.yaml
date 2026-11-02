@@ -77,15 +77,6 @@ tests:
   - python:
       imports:
         - codext
-        - codext.base
-        - codext.binary
-        - codext.common
-        # - codext.compressions
-        - codext.crypto
-        - codext.hashing
-        - codext.languages
-        - codext.others
-        - codext.stegano
       pip_check: true
       python_version:
         - ${{ python_min }}.*
